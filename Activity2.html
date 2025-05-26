@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Final Fantasy XV</title>
+    <style>
+      body {
+        background-color: beige;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        text-align: center;
+      }
+
+      nav {
+        background-color: #333;
+        padding: 10px 0;
+        margin-bottom: 20px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      img {
+        width: 250px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .info {
+        max-width: 700px;
+        margin: 20px auto;
+        text-align: center;
+      }
+
+      #greeting {
+        font-size: 20px;
+        margin-top: 10px;
+        color: darkblue;
+      }
+
+      footer {
+        margin-top: 20px;
+        padding: 10px 0;
+        background-color: #333;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Characters</a>
+      <a href="#">Story</a>
+      <a href="#">Gallery</a>
+    </nav>
+
+    <h1 id="title">Final Fantasy XV</h1>
+    <p id="desc">This is Cloud Strife he's one of the main characters.</p>
+    <img
+      id="pic"
+      src="https://2.bp.blogspot.com/-OTXcHtoGnKU/XQAJLeL3UkI/AAAAAAAAHEE/ka-NLkH2z94yJs_raYasWR1fvRH6tc8KQCKgBGAs/w0/cloud-strife-final-fantasy-7-remake-uhdpaper.com-4K-20.jpg"
+      alt="Cloud Strife" />
+
+    <p id="greeting"></p>
+
+    <button onclick="updatePage()">Click Me</button>
+
+    <div class="info">
+      <h2>About the Game</h2>
+      <p>
+        Final Fantasy XV follows Prince Noctis and his loyal companions on a
+        quest to reclaim his homeland and fulfill his destiny. With a rich
+        narrative, the game combines fantasy and realism in a way that deeply
+        immerses players.
+      </p>
+      <p>
+        The battle system is action-based, allowing real-time combat with
+        magical abilities, weapon switching, and coordinated team attacks. Each
+        character brings unique skills to the party, making gameplay dynamic and
+        strategic.
+      </p>
+      <p>
+        Players can explore a vast open world filled with towns, dungeons, and
+        wildlife. Driving the Regalia across the continent or camping with
+        friends creates an emotional bond with the characters.
+      </p>
+      <p>
+        Beyond gameplay, FFXV offers stunning visuals, a powerful soundtrack by
+        Yoko Shimomura, and themes of friendship, duty, and sacrifice that
+        resonate long after the credits roll.
+      </p>
+    </div>
+
+    <script>
+      // When the page loads, show a welcome pop-up
+      alert("Welcome to the Final Fantasy XV Fan Page!");
+
+      // This grabs the user's name with a pop-up input
+      let name = prompt("What's your name?");
+
+      // This puts a hello message on the page using their name
+      document.getElementById("greeting").innerText =
+        "Hello, " + name + "! Enjoy the site.";
+
+      // This function runs when the button gets clicked
+      function updatePage() {
+        // Changes the title text
+        document.getElementById("title").innerText = "FFXV is Fire!";
+
+        // Updates the short description under the title
+        document.getElementById("desc").innerHTML =
+          " this is Noctis the other dude.";
+
+        // Switches the image to one of Noctis
+        document.getElementById("pic").src =
+          "http://images6.fanpop.com/image/photos/37700000/Noctis-wallpaper-1-final-fantasy-xv-37726127-2074-1166.png";
+
+        // Adds a gold border and a shadow around the image to make it pop I learnt that from this video https://youtu.be/W6NZfCO5SIk.
+        let img = document.getElementById("pic");
+        img.style.border = "5px solid gold";
+        img.style.boxShadow = "0px 0px 20px black";
+
+        // This just logs a message in the browser's console (for testing/debugging)
+        console.log("Page updated!");
+      }
+    </script>
+
+    <footer>
+      <p>&copy; 2025 Final Fantasy XV Fan Page</p>
+      <p>Created by Ishaan</p>
+    </footer>
+  </body>
+</html>
